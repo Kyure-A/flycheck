@@ -1317,10 +1317,10 @@ just return nil."
   (interactive)
   (with-current-buffer (get-buffer-create "*flycheck-quick-help*")
     (with-help-window (current-buffer)
-      (flycheck-mode) ;; so that we can exapnd \\[flycheck-<function>]
+      ;; (flycheck-mode)
       (let ((help
              (substitute-command-keys
-        "Flycheck automatically runs checks on writable files when changed.
+              "Flycheck automatically runs checks on writable files when changed.
 Mode line status for the current buffer:
   FlyC        Not been checked yet
   FlyC*       Flycheck is running
