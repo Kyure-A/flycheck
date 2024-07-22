@@ -885,7 +885,7 @@ to view the docstring of the syntax checker.  Likewise, you may use
 
 .. supported-language:: Perl
 
-   Flycheck checks Perl with `perl` and `perl-perlcritic`.
+   Flycheck checks Perl with `perl`, `perl-perlcritic`, and `perl-perlimports`.
 
    .. syntax-checker:: perl
 
@@ -914,6 +914,12 @@ to view the docstring of the syntax checker.  Likewise, you may use
          The theme expression, passed as the ``--theme`` to ``perlcritic``.
 
       .. syntax-checker-config-file:: flycheck-perlcriticrc
+
+   .. syntax-checker:: perl-perlimports
+
+      Clean up Perl import statements with `perlimports`_.
+
+      .. _perlimports: https://metacpan.org/dist/App-perlimports/view/script/perlimports
 
 .. supported-language:: PHP
 
@@ -1345,6 +1351,14 @@ to view the docstring of the syntax checker.  Likewise, you may use
          A list of additional library directories. Relative paths are relative
          to the buffer being checked.
 
+.. supported-language:: SaltStack
+
+   .. syntax-checker:: salt-lint
+
+      Flycheck checks SaltStack YAML files with SALT-Lint_.
+
+      .. _SALT-Lint: https://salt-lint.readthedocs.io/en/latest/
+
 .. supported-language:: Sass/SCSS
 
    Flycheck checks SASS with `sass/scss-sass-lint` or
@@ -1583,6 +1597,10 @@ to view the docstring of the syntax checker.  Likewise, you may use
       Check style with `ChkTeX <http://www.nongnu.org/chktex/>`_.
 
       .. syntax-checker-config-file:: flycheck-chktexrc
+
+      .. defcustom:: flycheck-chktex-extra-flags
+
+         A list of extra arguments to give to chktex.
 
    .. syntax-checker:: tex-lacheck
 
